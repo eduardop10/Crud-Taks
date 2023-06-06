@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-1.1.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Task {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String
+  createdAt   DateTime  @default(now())
+  dueDate     DateTime
+  priority    Priority
+}
+
+enum Priority {
+  HIGH
+  MEDIUM
+  LOW
+}
