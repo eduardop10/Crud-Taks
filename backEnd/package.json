@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "prisma": "prisma migrate dev",
     "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
   },
   "dependencies": {
@@ -13,7 +14,8 @@
     "express-async-errors": "^3.1.1",
     "iconv-lite": "^0.6.3",
     "joi": "^17.9.2",
-    "project-test": "^1.0.3"
+    "project-test": "^1.0.3",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
